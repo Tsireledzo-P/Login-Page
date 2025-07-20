@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome – Please Login</h1>
+        <form onsubmit="event.preventDefault(); verifyUser();">
+            <label for="usernameInput">Username:</label>
+            <input type="text" id="usernameInput" required />
+
+            <label for="passwordInput">Password:</label>
+            <input type="password" id="passwordInput" required />
+
+            <p id="message"></p>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function verifyUser() {
+            const username = document.getElementById('usernameInput').value;
+            const password = document.getElementById('passwordInput').value;
+            checkUserCreds(username, password);
+        }
+
+        function checkUserCreds(username, password) {
+            const systemUsername = 'Bond';
+            const systemPassword = '007';
+
+            const message = document.getElementById('message');
+            if (username === systemUsername && password === systemPassword) {
+                message.textContent = 'Login successful! Welcome, ' + username + '!';
+                message.style.color = 'lightgreen';
+            } else {
+                message.textContent = 'Username or password is incorrect';
+                message.style.color = 'salmon';
+            }
+        }
+    </script>
+</body>
+</html>
