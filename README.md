@@ -1,4 +1,3 @@
-# Login Page
 Week 4 - FNB App Academy
 # 🔐 Login Page
 
@@ -29,11 +28,6 @@ Login-Page/
 - HTML5  
 - CSS3  
 - JavaScript (optional)
-
-## 📸 Screenshot
-
-![Screenshot](screenshot.png)  
-*(Replace with a real screenshot of your project)*
 
 ## 🧑‍💻 How to Use
 
